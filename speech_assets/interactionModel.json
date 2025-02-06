@@ -1,0 +1,221 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "my planner",
+            "intents": [
+                {
+                    "name": "GetEventsIntent",
+                    "slots": [
+                        {
+                            "name": "start_date",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "end_date",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "eventSynonyms",
+                            "type": "LIST_OF_EVENT_SYNONYMS"
+                        },
+                        {
+                            "name": "dateArticle",
+                            "type": "LIST_OF_DATE_ARTICLES"
+                        },
+                        {
+                            "name": "eventArticle",
+                            "type": "LIST_OF_EVENT_ARTICLES"
+                        },
+                        {
+                            "name": "calendarSynonyms",
+                            "type": "LIST_OF_CALENDAR_SYNONYMS"
+                        }
+                    ],
+                    "samples": [
+                        "GetEventsIntent English What is on {calendarSynonyms}",
+                        "GetEventsIntent English What {eventSynonyms} is on {calendarSynonyms}",
+                        "GetEventsIntent English What is happening {start_date}",
+                        "GetEventsIntent English What is happening {dateArticle} {start_date}",
+                        "GetEventsIntent English Do I have anything from {start_date} to {end_date}",
+                        "GetEventsIntent English Do I have anything from {start_date} to {end_date} on {calendarSynonyms}"
+                    ]
+                },
+                {
+                    "name": "SetEventIntent",
+                    "slots": [
+                        {
+                            "name": "start_date",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "start_time",
+                            "type": "AMAZON.TIME"
+                        },
+                        {
+                            "name": "duration",
+                            "type": "AMAZON.DURATION"
+                        },
+                        {
+                            "name": "end_date",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "eventSynonyms",
+                            "type": "LIST_OF_EVENT_SYNONYMS"
+                        },
+                        {
+                            "name": "calendarSynonyms",
+                            "type": "LIST_OF_CALENDAR_SYNONYMS"
+                        },
+                        {
+                            "name": "eventtype",
+                            "type": "LIST_OF_EVENT_TYPES"
+                        },
+                        {
+                            "name": "dateArticle",
+                            "type": "LIST_OF_DATE_ARTICLES"
+                        },
+                        {
+                            "name": "eventArticle",
+                            "type": "LIST_OF_EVENT_ARTICLES"
+                        }
+                    ],
+                    "samples": [
+                        "SetEventIntent English Add {eventArticle} {eventtype} to {calendarSynonyms}",
+                        "SetEventIntent English Add {eventArticle} {eventtype} to {calendarSynonyms} {start_date}",
+                        "SetEventIntent English Add {eventArticle} {eventtype} to {calendarSynonyms} {start_date} at {start_time}",
+                        "SetEventIntent English Add {eventArticle} {eventtype} to {calendarSynonyms} {start_date} at {start_time} lasting {duration}",
+                        "SetEventIntent English Add {eventArticle} {eventtype} to {calendarSynonyms} from {start_date} through {end_date}",
+                        "SetEventIntent English Add {eventArticle} {eventtype} to {calendarSynonyms} from {start_date} to {end_date}",
+                        "SetEventIntent English Add {eventArticle} {eventtype} on {start_date} to {calendarSynonyms}",
+                        "SetEventIntent English Add {eventArticle} {eventtype} on {start_date} at {start_time} to {calendarSynonyms}",
+                        "SetEventIntent English Add {eventArticle} {eventtype} on {start_date} at {start_time} lasting {duration} to {calendarSynonyms}",
+                        "SetEventIntent English add to {calendarSynonyms}",
+                        "SetEventIntent English Add {eventArticle} {eventtype}",
+                        "SetEventIntent English Add {eventArticle} {eventtype} on {start_date}",
+                        "SetEventIntent English Add {eventArticle} {eventtype} on {start_date} at {start_time}",
+                        "SetEventIntent English Add {eventArticle} {eventtype} on {start_date} at {start_time} lasting {duration}",
+                        "SetEventIntent English Add {eventArticle} {eventSynonyms} to {calendarSynonyms}",
+                        "SetEventIntent English Add {eventArticle} {eventSynonyms} to {calendarSynonyms} {start_date}",
+                        "SetEventIntent English Add {eventArticle} {eventSynonyms} to {calendarSynonyms} {start_date} at {start_time}",
+                        "SetEventIntent English Add {eventArticle} {eventSynonyms} to {calendarSynonyms} {start_date} at {start_time} lasting {duration}",
+                        "SetEventIntent English Add {eventArticle} {eventSynonyms} to {calendarSynonyms} from {start_date} through {end_date}",
+                        "SetEventIntent English Add {eventArticle} {eventSynonyms} to {calendarSynonyms} from {start_date} to {end_date}",
+                        "SetEventIntent English Add {eventArticle} {eventSynonyms} on {start_date} to {calendarSynonyms}",
+                        "SetEventIntent English Add {eventArticle} {eventSynonyms} on {start_date} at {start_time} to {calendarSynonyms}",
+                        "SetEventIntent English Add {eventArticle} {eventSynonyms} on {start_date} at {start_time} lasting {duration} to {calendarSynonyms}",
+                        "SetEventIntent English Add {eventArticle} {eventSynonyms} for {eventtype}",
+                        "SetEventIntent English Add {eventArticle} {eventSynonyms} on {start_date} for {eventtype}",
+                        "SetEventIntent English Add {eventArticle} {eventSynonyms} on {start_date} at {start_time} for {eventtype}",
+                        "SetEventIntent English Add {eventArticle} {eventSynonyms} on {start_date} at {start_time} lasting {duration} for {eventtype}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "LIST_OF_CALENDAR_SYNONYMS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Calendar",
+                                "synonyms": [
+                                    "Schedule",
+                                    "Planner",
+                                    "Agenda",
+                                    "my Calendar",
+                                    "my Schedule",
+                                    "my Planner",
+                                    "my Agenda",
+                                    "our Calendar",
+                                    "our Schedule"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LIST_OF_DATE_ARTICLES",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "from",
+                                "synonyms": [
+                                    "until",
+                                    "to",
+                                    "on",
+                                    "for"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LIST_OF_EVENT_SYNONYMS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Event",
+                                "synonyms": [
+                                    "Appointment",
+                                    "Slot",
+                                    "Meeting",
+                                    "Time",
+                                    "Events",
+                                    "Appointments",
+                                    "Slots",
+                                    "Meetings",
+                                    "Occasion",
+                                    "Occasions"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LIST_OF_EVENT_ARTICLES",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "the",
+                                "synonyms": [
+                                    "an",
+                                    "a",
+                                    "some"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LIST_OF_EVENT_TYPES",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Visit",
+                                "synonyms": [
+                                    "Party",
+                                    "Festival",
+                                    "Lecture",
+                                    "Class",
+                                    "Doctor"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

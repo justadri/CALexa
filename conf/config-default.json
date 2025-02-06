@@ -1,0 +1,7 @@
+{
+	"calexaPort": 5000,
+	"url" : "https://your.server/dav.php/calendars/",
+    "username" : "username",
+    "password" : "password",
+    "timezone" : "America/New_York"
+}
