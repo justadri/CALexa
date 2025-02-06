@@ -13,7 +13,7 @@ app = Flask(__name__)
 ask = Ask(app, '/')
 
 # read configuration
-with open('../conf/config.json') as json_data_file:
+with open('/app/conf/config.json') as json_data_file:
     config = json.load(json_data_file)
 
 local_tzinfo = ZoneInfo(config['timezone'])
